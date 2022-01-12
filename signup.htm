@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook page</title>
+    <link rel="icon" href="640px-Facebook_icon.svg" type="image" <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        function abc() {
+            first = document.getElementById('fn').value
+            last = document.getElementById('ln').value
+            fullname = first + " " + last;
+            document.getElementById('fullname').value = fullname;
+
+            function abc() {
+                first = document.getElementById('fn').value
+                if (first.length == 0) {
+                    document.getElementById('error-msg-if-null').innerHTML = "Name is requried....!"
+                }
+                if (first.length < 2 && first.length > 0) {
+                    document.getElementById('error-msg-if-null').innerHTML = "Name must more then 2 Char ....!"
+                }
+                if (first.length > 2) {
+                }
+    </script>
+    <style>
+        h1 {
+            text-align: left;
+            text-color-blue;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        h5 {
+            text-align: left;
+        }
+    </style>
+
+</head>
+
+<body>
+    <center>
+        <h1>facebook</h1>
+        <h2>Recent logins</h2>
+        <h5>click your picture add an account</h5>
+        <img src="../847-8474751_download-empty-profile.png" alt="Girl in a jacket" width="50" height="60">
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Sign Up</button>
+     
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="col-md-6">
+                    <div class="form-inline">
+
+                        <input type="text" name="Email" placeholder="firstneme"
+                            style="height: 30px; width: 250px; margin: 20px;"><br>
+                        <input type="text" class="form-control" id="fn"><br>
+                        <span id="error-msg-if-null" class="text-danger"> </span>
+                        <span id="error-msg-if-succees" class="text-success"> </span>
+                    </div>
+
+                    <div class="form-inline">
+                        <input type=" number" name="Email" placeholder="mobile number and email id"
+                            style="height: 30px; width: 250px; margin: 20px;"><br>
+                        <input type="text" class="form-control" id="ln">
+                    </div>
+                    <div class="form-inline">
+                        <label>Full name : </label>
+                        <input type="text" class="form-control" id=fullname onfocus="abc()">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-success" onclick="abc()"> Sign Up </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+
+</body>
+
+</html>

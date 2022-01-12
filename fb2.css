@@ -1,0 +1,39 @@
+h1{
+    color:blue;
+    width:50px;
+}
+.cards{
+    display: flex;
+}
+.email{
+    text-align: center;
+}
+.pass{
+    text-align: center;
+}
+.btn{
+  margin-left: 110x;
+  
+}
+
+.para{margin-left:222px;
+
+  
+}
+/* .btn{
+    margin-left: 110x;
+    
+  } */
+  .aaa{
+    padding-left: 110x;
+    
+  }
+.car{
+    background-color: cadetblue;
+}
+.gender input{
+    display: flex;
+}
+
+
+

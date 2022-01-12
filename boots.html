@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        function abc(){
+               first=document.getElementById('fn').value
+               last=document.getElementById('ln').value
+               fullname= first +" " + last ;
+               document.getElementById('fullname').value= fullname;
+               
+               function abc(){
+        first=document.getElementById('fn').value
+        if(first.length==0){
+           document.getElementById('error-msg-if-null').innerHTML="Name is requried....!"
+        }
+        if(first.length<2 && first.length > 0 ){
+         document.getElementById('error-msg-if-null').innerHTML="Name must more then 2 Char ....!"
+      }
+      if(first.length>2 ){
+        }
+    </script>
+
+</head>
+<body>
+    <div class="col-md-6">
+        <h1> Registraction Form </h1>
+        <p> <span class=" glyphicon glyphicon-name">   </span></p>
+
+           <div class="form-inline">
+               <label>First name : </label>
+               <input type="text" class="form-control" id="fn" > 
+           </div> 
+           
+  
+<div class="form-inline">
+        <label class="text-success">First name : </label>
+        <input type="text" class="form-control" id="fn" ><br>
+        <span id="error-msg-if-null" class="text-danger"> </span> 
+        <span id="error-msg-if-succees" class="text-success"> </span> 
+    </div>
+
+           <div class="form-inline">
+            <label>Last  name : </label>
+            <input type="text" class="form-control" id="ln"> 
+        </div> 
+        <div class="form-inline">
+            <label>Full  name : </label>
+            <input type="text" class="form-control" id=fullname onfocus="abc()"> 
+        </div> 
+        <div>
+            <button type="submit" class="btn btn-success" onclick="abc()"> Save  </button>
+            <button type="button" class="btn btn-danger"> Delete </button>
+        </div>
+    </div>
+
+
+    
+
+</body>
+</html>

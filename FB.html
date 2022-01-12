@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fb2.css">
+    <script>
+        function logs() {
+            ename = document.getElementById('em').value;
+            pname = document.getElementById('pass').value;
+
+            if (ename.length == 0) {
+                document.getElementById('email-msg-if-null').innerHTML = "email  Is not Requried...!"
+            }
+            if (pname.length == 0) {
+                document.getElementById('pass-msg-if-null').innerHTML = "enter your password...!"
+            }
+        }
+
+
+
+
+
+
+
+
+        function change() {
+            fname = document.getElementById('fn').value
+            lname = document.getElementById('ln').value
+
+            if (fname.length == 0) {
+                document.getElementById('error-msg-if-null').innerHTML = "Name Is not Requried...!"
+                document.getElementById('error-msg-if-null').style.color = "red";
+            }
+            if (lname.length == 0) {
+                document.getElementById('success-msg-if-null').innerHTML = "Name Is Requried...!"
+                document.getElementById('success-msg-if-null').style.color = "red";
+
+
+            }
+
+            if (fname.length > 0 && fname.length < 2) {
+                document.getElementById('error-msg-if-null').innerHTML = "atleast two letter"
+                document.getElementById('error-msg-if-null').style.color = "red";
+            }
+            if (lname.length > 0 && fname.length < 2) {
+                document.getElementById('success-msg-if-null').innerHTML = "atleast two letter...!"
+                document.getElementById('success-msg-if-null').style.color = "red";
+            }
+
+            if (fname.length > 2) {
+                document.getElementById('error-msg-if-null').innerHTML = "atleast two letter"
+                document.getElementById('error-msg-if-null').style.color = "green";
+            }
+            if (lname.length > 2) {
+                document.getElementById('success-msg-if-null').innerHTML = "atleast two letter...!"
+                document.getElementById('success-msg-if-null').style.color = "green";
+            }
+
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <div class="facbook">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1>Facebook</h1>
+                    <h5>Recent Logins</h5>
+                    <p>cLick your picture an add account</p>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="../847-8474751_download-empty-profile.png"
+                                    style="height: 100px; width: 100px;" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="align-items: center;">Suriya</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="../instagram-3814061_1280.png"
+                                    style="height: 100px; width: 100px;" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="align-items: center;">Others</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="car">
+                        <div class="sign" style="height: 354px;">
+                            <div class="email">
+                                <input type="email" id="em" placeholder="email or phone number"
+                                    style=" height: 36px;width: 250px;  margin: 20px;"><br>
+                                <span id="email-msg-if-null" class="text-danger">
+                                </span>
+                            </div>
+                            <div class="pass">
+                                <input type="number" id="pass" placeholder="password"
+                                    style="height: 30px; width: 250px;  margin: 20px;"><br>
+                                <span id="pass-msg-if-null" class="text-danger">
+                                </span>
+                            </div><br>
+
+                            <button style="margin-left: 176px;   width: 176px" type="button" class="btn btn-primary"
+                                onclick="logs()">Login</button>
+
+
+                            <div class="pra" style="margin-left:210px;">
+                                <p>forget account </p>
+
+                            </div>
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#myModal" style="margin-left: 205px">
+                                Create Account
+                            </button>
+
+
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Sign up
+                                            </h4><br>
+
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+
+
+                                        <div class="modal-body" style=" width: 472px;">
+                                            <label for=""></label>
+                                            <input type="text" id="fn" class="form control" placeholder="Firstname"
+                                                style="height: 41px; width: 180px;  margin: 10px;">
+                                            <span id="error-msg-if-null" class="text-danger" style="color: red;">
+                                            </span>
+
+
+                                            <label for=""></label>
+                                            <input type="text" id="ln" class="form control" required
+                                                placeholder="Surname"
+                                                style="height: 41px; width: 180px;  margin: 10px;"><br>
+                                            <span id="succes-msg-if-null" class="text-success" style="color: green;">
+                                            </span>
+
+
+                                            <label for=""></label>
+                                            <input type="text" id="fuln" class="form control" required
+                                                placeholder="fullname"
+                                                style="height: 41px; width: 345px;  margin: 10px;"><br>
+                                            <span id="succes-msg-if-null" class="text-success" style="color: green;">
+                                            </span>
+
+
+                                            <label for=""></label>
+                                            <input type="text" required placeholder="Mobile number or email address"
+                                                style="height: 41px; width: 345px;  margin: 10px;"><br>
+                                            <label for=""></label>
+                                            <input type="text" required placeholder="Password"
+                                                style="height: 41px; width: 345px;  margin: 10px;"><br>
+                                            <p>Date of birth ?</p>
+                                            <select class="form" style="margin-left: 66px;">
+
+                                                <option value="1">1</option>
+                                                <option value="1">2</option>
+                                                <option value="1">3</option>
+                                                <option value="2">4</option>
+                                                <option value="3">5</option>
+                                                <option value="4">6</option>
+                                                <option value="5">7</option>
+                                                <option value="6">8</option>
+                                                <option value="7">9</option>
+                                                <option value="8">10</option>
+                                                <option value="9">11</option>
+                                                <option value="10">12</option>
+                                                <option value="11">13</option>
+                                                <option value="12">14</option>
+                                                <option value="12">15</option>
+                                                <option value="12">16</option>
+                                                <option value="12">17</option>
+                                                <option value="12">18</option>
+                                                <option value="12">19</option>
+                                                <option value="12">20</option>
+                                                <option value="12">21</option>
+                                                <option value="12">22</option>
+                                                <option value="12">23</option>
+                                                <option value="12">24</option>
+                                                <option value="12">25</option>
+                                                <option value="12">26</option>
+                                                <option value="12">27</option>
+                                                <option value="12">28</option>
+                                                <option value="12">29</option>
+                                                <option value="12">30</option>
+                                                <option value="12">30</option>
+
+                                            </select>
+                                            <select id="month">
+                                                <option value="1">January</option>
+                                                <option value="2">February</option>
+                                                <option value="3">March</option>
+                                                <option value="4">April</option>
+                                                <option value="5">May</option>
+                                                <option value="6">June</option>
+                                                <option value="7">July</option>
+                                                <option value="8">August</option>
+                                                <option value="9">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                            <select id="year">
+                                                <option value="2015">2011</option>
+                                                <option value="2016">2012</option>
+                                                <option value="2017">2013</option>
+                                                <option value="2018">2014</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2015">2019</option>
+                                                <option value="2016">2020</option>
+                                                <option value="2017">2021</option>
+                                                <option value="2018">2022</option>
+                                                <option value="2015">2023</option>
+                                                <option value="2016">2024</option>
+                                                <option value="2017">2025</option>
+                                                <option value="2018">2026</option>
+                                            </select>
+                                            <div name="gender"> <br>
+                                                <p>Gender ?</p>
+                                                <div style="display: flex;">
+                                                    <div class="col-4" style="border: 1px solid black;margin: 5px;">
+                                                        <input type="radio" name="gender" value="male"> Male
+                                                    </div>
+                                                    <div class="col-4" style="border: 1px solid black;margin: 5px;">
+                                                        <input type="radio" name="gender" value="female"> Female<br>
+                                                    </div>
+                                                    <div class="col-4" style="border: 1px solid black;margin: 5px;">
+                                                        <input type="radio" name="gender" value="other"> Other
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <p>By clicking Sign Up, you agree to our Terms, Data Policy and Cookie
+                                                Policy. You may receive SMS notifications from us and can opt out at any
+                                                time.</p>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-success" onclick="change()" style="margin: 31px; margin: auto; width:178px;    margin-right: 143px
+                                                ">Sign Up</button>
+                                                <span id="error-msg-if-null" class="text-danger">
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade"></div>
+
+
+                                <div class="modal"></div>
+
+
+
+
+
+
+
+                                <!--
+                    <div class="col-lg-6">
+                         Trigger the modal with a button 
+                        <button type="button" class="btn btn-success btn-lg" data-toggle="modal"
+                            data-target="#myModal">Sign
+                            Up</button>
+
+                        
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Sign Up</h4>
+                                        <h6 class="model-title-p">it's quick and easy</h6>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Some text in the modal.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Store() {
+            name = document.getElementById('name').value;
+            pass = document.getElementById('pass').value;
+            localStorage.setItem("myname",name)
+            localStorage.setItem("mypass",pass)
+        }
+       function getValue()
+       {
+           name =localStorage.getItem("myname");
+           alert("MY Name is : "+name)
+       }
+       function DeleteVlaue(){
+            localStorage.removeItem("myname")
+            alert("Name is removed ......")
+       }
+    </script>
+
+</head>
+<body>
+    <center>
+        Name : <input type="text" id="name"><br>
+        Pass : <input type="text" id="pass"><br>
+        <input type="submit" value="Store" onclick="Store()">
+        <input type="submit" value="Read  " onclick="getValue()">
+        <input type="submit" value="Delete" onclick="DeleteVlaue()">
+
+    </center>
+
+    
+</body>
+</html>
